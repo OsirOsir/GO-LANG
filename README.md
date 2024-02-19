@@ -1,2 +1,2 @@
-# Go-Pro-Continuors-Training
+# GO LANG
 Keep Pushing
