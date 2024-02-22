@@ -1,10 +1,10 @@
 package main
 
-import "github.com/01-edu/z01"
+import "fmt"
 
 func main() {
 	for i := 'z'; i >= 'a'; i-- {
-		z01.PrintRune(i)
+		fmt.Printf("%c", i)
 	}
-	z01.PrintRune('\n')
+	fmt.Println()
 }
