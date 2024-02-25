@@ -5,8 +5,8 @@ import "fmt"
 func main() {
 	dates := [4]int{23, 45, 67, 56}
 
-	for i, val := range dates {
-		fmt.Println(i, val, " ")
+	for _, val := range dates {
+		fmt.Println(val, " ")
 	}
 	fmt.Println(len(dates))
 }
