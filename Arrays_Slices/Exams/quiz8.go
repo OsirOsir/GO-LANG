@@ -6,16 +6,17 @@ package main
 
 import "fmt"
 
-func reverseElements(letters []rune) {
+func reverseArrays(letters []rune) {
+
 	for i, j := 0, len(letters)-1; i < j; i, j = i+1, j-1 {
+
 		letters[i], letters[j] = letters[j], letters[i]
 	}
 }
 
 func main() {
-	letters := []rune{'h', 'e', 'l', 'l', 'o'}
+	letters := []rune{'P', 'h', 'i', 'l', 'i', 'O', 's', 'i', 'r'}
 
-	reverseElements(letters)
-
+	reverseArrays(letters)
 	fmt.Println(string(letters))
 }
