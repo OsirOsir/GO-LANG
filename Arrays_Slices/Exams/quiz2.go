@@ -7,7 +7,9 @@ package main
 import "fmt"
 
 func main() {
-	fruits := [5]string{"Mangoe", "Banana", "Apple", "Orange", "Lemon"}
+	fruits := [5]string{"Banana", "Orange", "Tomato", "Mangoe", "Lemon"}
 
-	fmt.Printf("The Len is %v\n ", len(fruits))
+	fmt.Print(len(fruits))
+	fmt.Print("\n")
+
 }

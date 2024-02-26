@@ -7,13 +7,11 @@ package main
 import "fmt"
 
 func main() {
-	expenses := [5]float64{224.5, 345.9, 233.7, 102.8, 156.9}
-
+	expenses := [5]float64{102.9, 243.4, 122.6, 566.4, 321.7}
 	var sum float64
-
 	for i, v := range expenses {
-		fmt.Printf("%d nth element expence is: %.1f\n", i, v)
+		fmt.Printf("\n%d exepense value is %.1f\n", i, v)
 		sum += v
 	}
-	fmt.Printf("\nTotal sum of Expenses is: %.1f\n", sum)
+	fmt.Printf("\nThe total sum is %.3f\n", sum)
 }

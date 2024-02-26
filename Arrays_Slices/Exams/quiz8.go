@@ -4,20 +4,18 @@
 
 package main
 
-import (
-	"fmt"
-	"sort"
-)
+import "fmt"
 
-func reverseElements(letters [5]rune) []rune {
-	newLetters := letters[:]
-	fmt.Println(newLetters)
-
-	
+func reverseElements(letters []rune) {
+	for i, j := 0, len(letters)-1; i < j; i, j = i+1, j-1 {
+		letters[i], letters[j] = letters[j], letters[i]
+	}
 }
 
-func main(
-	letters := [5]rune{'h', 'e', 'l', 'l', 'o'}
-reverseElements(letters)
+func main() {
+	letters := []rune{'h', 'e', 'l', 'l', 'o'}
 
-)
+	reverseElements(letters)
+
+	fmt.Println(string(letters))
+}

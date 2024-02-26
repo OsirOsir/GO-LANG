@@ -19,9 +19,8 @@ package main
 import "fmt"
 
 func main() {
-	ages := [...]int{20, 35, 21, 45, 67}
-
-	for v := 0; v < len(ages); v++ {
-		fmt.Println(ages[v])
+	ages := [...]int{34, 25, 76, 45, 32}
+	for i := 0; i <= 4; i++ {
+		fmt.Println(ages[i])
 	}
 }
