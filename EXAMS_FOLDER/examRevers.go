@@ -7,10 +7,8 @@ func reverseElement(letters []rune) {
 		letters[i], letters[j] = letters[j], letters[i]
 	}
 }
-
 func main() {
-	letters := []rune{'p', 'h', 'i', 'l', 'i', 'p'}
-
+	letters := []rune{'P', 'H', 'I', 'L', 'I', 'P'}
 	reverseElement(letters)
 
 	fmt.Println(string(letters))
