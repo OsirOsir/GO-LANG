@@ -7,7 +7,8 @@
 package main
 
 func f(x int) int {
-	return x * 2
+	new := x * 2
+	return new
 }
 
 func applyFunc(x int, f func(int) int) int {
