@@ -14,3 +14,16 @@ func main() {
 	// 	fmt.Printf("the element at %d is %.1f\n", i, a[i])
 	// }
 }
+
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	a := [4]int{7, 4, 6, 4}
+// 	sum := float64(0)
+// 	for i := 0; i <= len(a)-1; i++ {
+// 		sum += float64(a[i])
+// 	}
+// 	fmt.Println(sum)
+// }
