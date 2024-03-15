@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var manu map[string]int
+	var manu = make(map[string]int)
 
 	manu["Chapati"] = 300
 
