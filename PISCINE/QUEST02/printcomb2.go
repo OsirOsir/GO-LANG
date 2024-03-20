@@ -14,8 +14,6 @@ func PrintComb2() {
 	}
 	fmt.Println()
 }
-
-
 func main() {
 	PrintComb2()
 }
