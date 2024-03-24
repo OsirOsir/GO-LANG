@@ -8,6 +8,6 @@ func hello() *int {
 }
 
 func main() {
-	d := hello()
-	fmt.Println("Value of d", *d)
+	b := hello()
+	fmt.Println("Value of b", *b)
 }
