@@ -15,6 +15,6 @@ func main() {
 		lastName:  "Onger",
 	}
 
-	fmt.Printf("First Name: %s Last Name: %s\n Age: %d\n Salary: %v", emp.firstName, emp.lastName, emp.age, emp.salary)
+	fmt.Printf("First Name: %s Last Name: %s\n Age: %d\n Salary: %v\n", emp.firstName, emp.lastName, emp.age, emp.salary)
 
 }
