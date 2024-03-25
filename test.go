@@ -14,5 +14,13 @@ func main() {
 	for k, v := range employeSalaries {
 		fmt.Println(k, v)
 	}
+	newPerson := "Elvis"
+	// value, ok := map[key]
+	value, ok := employeSalaries[newPerson]
 
+	if ok == true {
+		fmt.Printf("Slary of %s is %v\n", newPerson, value)
+	} else {
+		fmt.Println("Not found")
+	}
 }
