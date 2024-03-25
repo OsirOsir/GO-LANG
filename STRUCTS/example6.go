@@ -4,16 +4,16 @@ package main
 
 import "fmt"
 
-type Status struct {
+type Address struct {
 	country  string
 	province string
 }
 
 type bioData struct {
-	name   string
-	age    int
-	gender string
-	status Status
+	name    string
+	age     int
+	gender  string
+	address Address
 }
 
 func main() {
@@ -21,11 +21,11 @@ func main() {
 		name:   "Alice",
 		age:    26,
 		gender: "Female",
-		status: Status{
+		address: Address{
 			country:  "Kenya",
 			province: "Nyanza",
 		},
 	}
-	fmt.Println("Country= ", P1.status.country)
+	fmt.Println("Country= ", P1.address.country)
 	fmt.Println("Name: ", P1.name)
 }
