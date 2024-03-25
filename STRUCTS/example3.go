@@ -12,8 +12,9 @@ type employee struct {
 func main() {
 	emp := employee{
 		firstName: "Brian",
+		lastName:  "Onger",
 	}
 
-	fmt.Println(emp)
+	fmt.Printf("First Name: %s Last Name: %s\n Age: %d\n Salary: %v", emp.firstName, emp.lastName, emp.age, emp.salary)
 
 }
