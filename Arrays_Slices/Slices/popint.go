@@ -12,6 +12,7 @@ func popint(x []int) []int {
 func main() {
 	y := []int{98, 68, 75, 98, 78}
 
-	fmt.Println(popint(y))
+	y = popint(y)
+	fmt.Println(y)
 
 }
