@@ -7,6 +7,7 @@ import (
 
 func main() {
 	infor := structFile.Phone{
+
 		Name:  "Tecno",
 		Size:  5.5,
 		Model: "S5",
