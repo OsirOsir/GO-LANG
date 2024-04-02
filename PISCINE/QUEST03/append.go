@@ -5,10 +5,8 @@ package main
 
 import "fmt"
 
-func appenSlice(a *[]int) []int {
+func appenSlice(a *[]int) {
 	*a = append(*a, 90)
-
-	return *a
 
 }
 
