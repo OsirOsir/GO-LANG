@@ -6,7 +6,6 @@ import "fmt"
 
 func pointInt(a *int) {
 	*a = *a + 1
-
 }
 
 func main() {
