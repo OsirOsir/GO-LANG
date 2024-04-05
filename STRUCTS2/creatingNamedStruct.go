@@ -22,5 +22,5 @@ func main() {
 
 	emp2 := employee{"Philip", "Osir", 26, 30000}
 
-	fmt.Println("employe32", emp2)
+	fmt.Println("employee2", emp2)
 }
