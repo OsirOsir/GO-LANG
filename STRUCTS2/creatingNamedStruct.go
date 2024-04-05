@@ -16,11 +16,11 @@ func main() {
 		age:       35,
 		salary:    30000,
 	}
-	fmt.Println(emp1)
+	fmt.Println("employee1", emp1)
 
 	//  we can also creat structs without specifying the fields
 
 	emp2 := employee{"Philip", "Osir", 26, 30000}
 
-	fmt.Println(emp2)
+	fmt.Println("employe32", emp2)
 }
