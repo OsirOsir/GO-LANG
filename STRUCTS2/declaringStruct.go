@@ -6,3 +6,11 @@ type employee struct {
 	age       int
 	weight    float64
 }
+
+// other ways of  declaring a struct
+
+type employee struct {
+	firstName, lastName string
+	age                 int
+	weight              int
+}
