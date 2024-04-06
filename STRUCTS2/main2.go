@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	myInvoice := newInvoice("Hot Cafe..... \nPhilipo's Bill")
+	myInvoice := newInvoice("Hot Meal... Philips Invoice")
 
 	fmt.Println(myInvoice.format())
 }
