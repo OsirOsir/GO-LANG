@@ -14,22 +14,24 @@ func newInvoice(name string) invoice {
 		item: map[string]float64{},
 		tip:  0,
 	}
+
 	return i
 }
 
 func (i invoice) format() string {
-	st := "Invoice Summary\n"
+	fs := "Invoive Breakdown\n"
 
-	var total float64 = 0
+	total := 0.0
 
 	for k, v := range i.item {
-		st += fmt.Sprintf("%-25s   ...%.1f\n", k+":", v)
-		total += v
+		fs = fs + fmt.Sprintf("%-25s ...$%.1f \n", k+":", v)
+		total = total + v
 	}
-	st += fmt.Sprintf("%-25s   ...%.1f\n", "Tip:", i.tip)
-	st += fmt.Sprintf("%-25s   ...%.1f", "Total:", total+i.tip)
 
-	return st
+	fs += fmt.Sprintf("%-25s ...$%.1f\n", "Tip:", i.tip)
+	fs += fmt.Sprintf("%-25s ...$%.1f\n", "Total:", total+i.tip)
+
+	return fs
 }
 
 func (i invoice) updateItem(item string, price float64) {
