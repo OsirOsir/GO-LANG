@@ -5,19 +5,19 @@ import "fmt"
 type invoice struct {
 	name  string
 	items map[string]float64
-	tip   int
+	tip   float64
 }
 
 func newInvoice(name string) invoice {
 	i := invoice{
 		name:  name,
-		items: map[string]float64{"Chapati": 30.5, "Beans": 60.8},
+		items: map[string]float64{},
 		tip:   0,
 	}
 	return i
 }
 
-func (i invoice) format() string {
+func (i *invoice) format() string {
 	fs := "Summary of Invoice \n"
 
 	var total float64
@@ -27,7 +27,20 @@ func (i invoice) format() string {
 		total = total + v
 	}
 
-	fs = fs + fmt.Sprintf("%-25s   ...$%.2f", "Total:", total)
+	fs = fs + fmt.Sprintf("%-25s   ...$%.2f\n", "Tip:", i.tip)
+
+	fs = fs + fmt.Sprintf("%-25s   ...$%.2f", "Total:", total+i.tip)
 
 	return fs
+}
+
+// update tip
+
+func (i *invoice) updateTip(tip float64) {
+	i.tip = tip
+}
+
+// update Items
+func (i *invoice) updateItems(name string, price float64) {
+	i.items[name] = price
 }
