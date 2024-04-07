@@ -7,11 +7,13 @@ import (
 )
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Print("Whats your name: ")
-	scanner.Scan()
+	newScanner := bufio.NewScanner(os.Stdin)
 
-	input := scanner.Text()
+	fmt.Print("Whats You country? ")
 
-	fmt.Printf("Ypur name is: %q\n", input)
+	newScanner.Scan()
+
+	country := newScanner.Text()
+
+	fmt.Println("My country name is ?", country)
 }

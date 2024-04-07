@@ -21,7 +21,7 @@ func newInvoice(name string) invoice {
 func (i invoice) format() string {
 	fs := "Invoive Breakdown\n"
 
-	total := 0.0
+	var total float64
 
 	for k, v := range i.item {
 		fs = fs + fmt.Sprintf("%-25s ...$%.1f \n", k+":", v)
