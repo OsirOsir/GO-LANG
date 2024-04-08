@@ -3,16 +3,15 @@ package main
 import "fmt"
 
 func main() {
+	myInvoice := newInvoice("Philips Bill")
 
-	myInvoice := newInvoice("Hotel Bill")
-
-	myInvoice.updateItem("Chapati", 45.5)
-	myInvoice.updateItem("Tea", 10.5)
-	myInvoice.updateItem("Beans", 35.9)
-	myInvoice.updateItem("GreenGrams", 34.6)
-	myInvoice.updateItem("Beef", 40.2)
-	myInvoice.updateItem("Matumbo", 65.1)
-	myInvoice.updateTip(23.6)
+	myInvoice.updateItems("Chapati", 36.5)
+	myInvoice.updateItems("Chai", 10.2)
+	myInvoice.updateItems("Beans", 30.5)
+	myInvoice.updateItems("Rice", 40.8)
+	myInvoice.updateItems("Beaf", 136.5)
+	myInvoice.updateItems("Matumbo", 100.1)
+	myInvoice.updateTip(10.4)
 
 	fmt.Println(myInvoice.format())
 }
