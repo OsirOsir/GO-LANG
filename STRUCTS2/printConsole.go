@@ -12,13 +12,18 @@ func main() {
 
 	fmt.Print("Whats You country? ")
 
-	input, err := newScanner.ReadString('\n')
-	if err != nil {
-		fmt.Println("You didnt type anything", err)
-		return
-	}
+	input, _ := newScanner.ReadString('\n')
+	// if err != nil {
+	// 	fmt.Println("An eeror occurred:", err)
+	// 	return
+	// }
 
 	input = strings.TrimSpace(input)
+
+	if input == "" {
+		fmt.Println("You didnt type anything.")
+		return
+	}
 
 	fmt.Println("My country name is ", input)
 }
