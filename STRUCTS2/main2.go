@@ -1,16 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func createInvoice() invoice {
+	reader := bufio.NewReader(os.Stdin) //  The way we get user input from the consol
+	fmt.Print("Create a New Invoice name : ")
+
+	name, _ := reader.ReadString('\n') //
+	name = strings.TrimSpace(name)
+
+	i := newInvoice(name)
+
+	fmt.Println("New Invoice created : ", i.name)
+
+	return i
+}
 
 func main() {
-	myBill := newInvoice("Pan African Hotel Bill")
+	myInvoice := createInvoice()
 
-	myBill.updateItem("Chapati", 30.5)
-	myBill.updateItem("Chai", 10.2)
-	myBill.updateItem("Beans", 35.8)
-	myBill.updateItem("Rice", 20.3)
-	myBill.updateItem("Beaf", 28.7)
-	myBill.updateTip(36.2)
-
-	fmt.Println(myBill.format())
+	fmt.Println(myInvoice)
 }
