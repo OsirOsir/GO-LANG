@@ -3,11 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	finger := 4
 
-	fmt.Printf("Finger %d is", finger)
-
-	switch finger {
+	switch finger := 4; finger {
 	case 1:
 		fmt.Println("Thumb")
 	case 2:
