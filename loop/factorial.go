@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func factrorialNum(n int) int {
+	result := 1
+	for i := 1; i <= n; i++ {
+		result = result * i
+	}
+
+	return result
+}
+
+func main() {
+	num := 5
+
+	fmt.Println(factrorialNum(num))
+}
