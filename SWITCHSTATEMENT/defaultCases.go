@@ -17,5 +17,4 @@ func main() {
 	default:
 		fmt.Println("Incorrect fingure Number")
 	}
-
 }

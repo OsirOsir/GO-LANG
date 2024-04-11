@@ -3,14 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	letter := "j"
+	letter := 'k'
 
-	fmt.Printf("Lettter %s is a", letter)
+	fmt.Printf("Letter %c ", letter)
 
 	switch letter {
-	case "a", "e", "i", "o", "u":
-		fmt.Println("Vowels \t")
+	case 'a', 'e', 'i', 'o', 'u':
+		fmt.Println("is  a vowel")
 	default:
-		fmt.Println("\tNot a vowel")
+		fmt.Println("not a vowel")
 	}
+
 }
