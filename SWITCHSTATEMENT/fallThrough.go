@@ -18,5 +18,8 @@ func main() {
 		fallthrough
 	case num < 200:
 		fmt.Printf("%d is less than 200\n", num)
+		// case num < 65:
+		// 	fmt.Printf("%d is less than 65\n", num)
 	}
+
 }
