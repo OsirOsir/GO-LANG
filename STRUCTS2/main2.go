@@ -60,7 +60,8 @@ func promptOptions(i invoice) {
 		fmt.Println("Tip added :  $", tip)
 		promptOptions(i)
 	case "s":
-		fmt.Println("You choose to save your invoice", i)
+		i.save()
+		fmt.Println("You saved ", i.name)
 	default:
 		fmt.Println("That was not a valid option...")
 		promptOptions(i)

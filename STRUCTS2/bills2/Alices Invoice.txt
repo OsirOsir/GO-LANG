@@ -1,0 +1,6 @@
+Invoice Summary
+chapo:                      ...20.50
+Tea:                        ...10.99
+rice:                       ...24.50
+Tip:                        ...5.00
+Total:                      ...60.99

@@ -1,0 +1,6 @@
+Invoice Summary
+Pie:                        ...3.99
+Tea 2.50:                   ...2.20
+chapo:                      ...20.20
+Tip:                        ...5.00
+Total:                      ...31.39
