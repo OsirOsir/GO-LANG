@@ -1,15 +1,43 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func getInput(prompt string, r *bufio.Reader) (string, error) {
+	fmt.Print(prompt)
+	name, err := r.ReadString('\n')
+
+	return strings.TrimSpace(name), err
+}
+
+func createInvoice() invoice {
+	reader := bufio.NewReader(os.Stdin)
+	// fmt.Print("Create a new Invoice name: ")
+
+	// name, _ := reader.ReadString('\n')
+
+	// name = strings.TrimSpace(name)
+	name, _ := getInput("Create a new Invoice Name: ", reader)
+
+	i := newInvoice(name)
+	fmt.Println("New Invoice Created", name)
+
+	return i
+}
+
+func promptOptions(i invoice) {
+	reader := bufio.NewReader(os.Stdin)
+
+	opt, _ := getInput("Chose from a - addItem, t - addTip, s - SaveInvoice ", reader)
+
+	fmt.Println("You Chose :", opt)
+}
 
 func main() {
-	myInvoice := newInvoice("Philips Invoice")
-
-	myInvoice.updateItem("Chapo", 34.1)
-	myInvoice.updateItem("Beans", 24.1)
-	myInvoice.updateItem("Rice", 60.5)
-	myInvoice.updateItem("Tea", 10.8)
-	myInvoice.updateTip(45.9)
-
-	fmt.Println(myInvoice.format())
+	myInvoice := createInvoice()
+	promptOptions(myInvoice)
 }
