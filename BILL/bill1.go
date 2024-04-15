@@ -11,8 +11,8 @@ type invoice struct {
 func newInvoice(name string) invoice {
 	i := invoice{
 		name: name,
-		item: map[string]float64{"Chapo": 34, "Chai": 10.2},
-		tip:  10,
+		item: map[string]float64{},
+		tip:  0,
 	}
 
 	return i
@@ -32,4 +32,12 @@ func (i invoice) format() string {
 	fs += fmt.Sprintf("%-25s   ...%.1f\n", "Total:", total+i.tip)
 
 	return fs
+}
+
+func (i invoice) updateItem(item string, price float64) {
+	i.item[item] = price
+}
+
+func (i *invoice) updateTip(tip float64) {
+	i.tip = tip
 }
