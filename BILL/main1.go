@@ -66,7 +66,8 @@ func promptOptions(i invoice) {
 		promptOptions(i)
 
 	case "s":
-		fmt.Println("Yo chose to save the invoice", i)
+		i.save()
+		fmt.Println("You saved the invoice - ", i.name)
 
 	default:
 		fmt.Println("Your choice is invalid")

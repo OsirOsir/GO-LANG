@@ -1,0 +1,6 @@
+Invoice Summary
+mandazi:                    ...20.0
+chai:                       ...10.2
+nyama:                      ...99.0
+Tip:                        ...0.0
+Total:                      ...129.2
