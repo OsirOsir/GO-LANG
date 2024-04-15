@@ -1,0 +1,6 @@
+Invoice Summary
+Chapo:                      ...10.5
+Beans:                      ...21.0
+Rice:                       ...25.0
+Tip:                        ...5.0
+Total:                      ...61.5

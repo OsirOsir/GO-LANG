@@ -1,0 +1,5 @@
+Invoice Summary
+chapo:                      ...$5.0
+Beans:                      ...$89.0
+Tip:                        ...$6.0
+Total:                      ...$100.0

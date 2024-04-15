@@ -1,0 +1,6 @@
+Invoice Summary
+Beans:                      ...31.0
+Beaf:                       ...150.8
+Chapo:                      ...20.5
+Tip:                        ...5.0
+Total:                      ...207.3
