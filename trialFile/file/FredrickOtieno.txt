@@ -1,0 +1,5 @@
+Employees Summary
+Names: Fredrick Otieno
+Age: 54
+Gender: Male
+Salary: 20333
