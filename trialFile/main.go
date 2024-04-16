@@ -39,34 +39,41 @@ func promptOptions(b bioData) {
 	case "1":
 		firstName, _ := getInput("First Name: ", reader)
 		secondName, _ := getInput("Second Name: ", reader)
+
+		b.updatebioFir(firstName)
+		b.updatebioseco(secondName)
 		fmt.Println(firstName, secondName)
 		promptOptions(b)
 
 	case "2":
 		age, _ := getInput("Age: ", reader)
 
-		a, err := strconv.ParseFloat(age, 64)
+		a, err := strconv.Atoi(age)
 		if err != nil {
 			fmt.Println("Age must be a number")
 			promptOptions(b)
 		}
+		b.updatebioAge(a)
 		fmt.Println(a)
 		promptOptions(b)
 	case "3":
 		gender, _ := getInput("Gender: ", reader)
 		fmt.Println(gender)
+		b.updatebioGender(gender)
 		promptOptions(b)
 	case "4":
 		salary, _ := getInput("Salary: ", reader)
-		s, err := strconv.ParseFloat(salary, 64)
+		s, err := strconv.Atoi(salary)
 		if err != nil {
 			fmt.Println("Salary must be a number")
 			promptOptions(b)
 		}
+		b.updatebioSalary(s)
 		fmt.Println(s)
 		promptOptions(b)
 	case "5":
-		fmt.Println("Data saved")
+		b.save()
+		fmt.Println("You saved the File")
 	default:
 		fmt.Println("Invalid Choice")
 		promptOptions(b)

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 type bioData struct {
 	firstName  string
@@ -46,4 +49,14 @@ func (b *bioData) updatebioGender(gender string) {
 }
 func (b *bioData) updatebioSalary(salary int) {
 	b.salary = salary
+}
+
+func (b *bioData) save() {
+	data := []byte(b.format())
+
+	err := os.WriteFile("file/"+b.firstName+b.secondName+".txt", data, 0644)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("Data Saved to file")
 }
