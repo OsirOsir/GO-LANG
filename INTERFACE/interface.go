@@ -2,67 +2,61 @@ package main
 
 import "fmt"
 
-type MotorVehicle interface {
-	Mileage() float64
+type Vehicle interface {
+	mileage() float64
+}
+
+type SuzukiAlto struct {
+	distance     float64
+	averagespeed string
 }
 
 type BMW struct {
 	distance     float64
-	fuel         float64
 	averagespeed string
 }
 
-type Audi struct {
-	distance     float64
-	fuel         float64
-	averagespeed string
-}
-
-type Subaru struct {
+type Demio struct {
 	distance float64
-	fuel     float64
 }
 
-func (b BMW) Mileage() float64 {
-	return b.distance / b.fuel
+func (s SuzukiAlto) mileage() float64 {
+	return s.distance
 }
 
-func (a Audi) Mileage() float64 {
-	return a.distance / a.fuel
+func (b BMW) mileage() float64 {
+	return b.distance
 }
 
-func (s Subaru) Mileage() float64 {
-	return s.distance / s.fuel
+func (d Demio) mileage() float64 {
+	return d.distance
 }
 
-func totalMileage(m []MotorVehicle) {
-	var tm float64
+func averageDistance(v []Vehicle) {
+	TD := 0.0
 
-	for _, v := range m {
-		tm += v.Mileage()
+	for _, r := range v {
+		TD = TD + r.mileage()
 	}
+	AD := TD / float64(len(v))
 
-	fmt.Printf("The total mileage per month is %.5f km/l\n", tm)
+	fmt.Printf("The Avarage Distance Coverd by the Vehicles is %.1fkm\n", AD)
 }
 
 func main() {
-	bi := BMW{
-		distance:     178.1,
-		fuel:         36,
-		averagespeed: "87",
+	v1 := SuzukiAlto{
+		distance:     235,
+		averagespeed: "89",
 	}
-	a1 := Audi{
-		distance:     134.9,
-		fuel:         45,
-		averagespeed: "90",
+	v2 := BMW{
+		distance:     148,
+		averagespeed: "70",
 	}
-
-	s1 := Subaru{
-		distance: 178.3,
-		fuel:     56,
+	v3 := Demio{
+		distance: 179,
 	}
 
-	person1 := []MotorVehicle{bi, a1, s1}
+	sliceVehicle := []Vehicle{v1, v2, v3}
 
-	totalMileage(person1)
+	averageDistance(sliceVehicle)
 }

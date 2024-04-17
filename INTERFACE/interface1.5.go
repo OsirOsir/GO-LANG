@@ -39,9 +39,10 @@ func totalAvarageMileage(v []Vihicle) {
 
 	for _, v := range v {
 		TAM = TAM + v.mileage()
-		// TAM = TAM / 3
 	}
-	fmt.Printf("The Total avarage mileage of the Vehices is %dkm/l\n", TAM)
+	average := TAM / len(v)
+
+	fmt.Printf("The Total avarage mileage of the Vehices is %dkm/l\n", average)
 }
 
 func main() {

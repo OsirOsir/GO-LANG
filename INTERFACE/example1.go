@@ -1,40 +1,38 @@
-// First we define an Interface called 'Animal' with a method called 'MakeSound'
 package main
 
 import "fmt"
 
 type Animal interface {
-	MakeSound() string
+	AnimalSound() string
 }
 
 type Dog struct{}
+type Cat struct{}
+type Cow struct{}
 
-func (d Dog) MakeSound() string {
+func (d Dog) AnimalSound() string {
 	return "Woof!"
 }
 
-type Cat struct{}
-
-func (c Cat) MakeSound() string {
+func (c Cat) AnimalSound() string {
 	return "Meow!"
 }
 
-type Cow struct{}
-
-func (c Cow) MakeSound() string {
+func (c Cow) AnimalSound() string {
 	return "Moo!"
 }
 
-func LetAnimalSpeak(a Animal) {
-	fmt.Println(a.MakeSound())
+func listenToSounds(a Animal) {
+	fmt.Println(a.AnimalSound())
 }
 
 func main() {
-	dog := Dog{}
-	cat := Cat{}
-	cow := Cow{}
+	d := Dog{}
+	c := Cat{}
+	co := Cow{}
 
-	LetAnimalSpeak(dog)
-	LetAnimalSpeak(cat)
-	LetAnimalSpeak(cow)
+	listenToSounds(d)
+	listenToSounds(c)
+	listenToSounds(co)
+
 }
