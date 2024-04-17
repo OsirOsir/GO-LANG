@@ -22,9 +22,9 @@ func (ms myVowel) findVowel() []rune {
 func main() {
 	name := myVowel("Philip Osir Otieno")
 
-	// var vl VowelFinder
+	var vl VowelFinder
 
-	// vl = name
+	vl = name
 
-	fmt.Printf("The vowels are %c \n", name.findVowel())
+	fmt.Printf("The vowels are %c \n", vl.findVowel())
 }
