@@ -24,7 +24,7 @@ func main() {
 
 	var vl VowelFinder
 
-	// vl = name
+	vl = name
 
 	fmt.Printf("The vowels are %c \n", vl.findVowel())
 }
