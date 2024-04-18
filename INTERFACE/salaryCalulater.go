@@ -33,7 +33,7 @@ func totalExpence(s []salaryCalcultar) {
 	for _, v := range s {
 		te += v.companySalary()
 	}
-	fmt.Printf("Total company expences is : ksh %d\n", te)
+	fmt.Printf("Total company expences is : USD %d\n", te)
 }
 
 func main() {
