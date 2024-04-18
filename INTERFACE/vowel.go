@@ -2,29 +2,29 @@ package main
 
 import "fmt"
 
-type VowelFinder interface {
+type vowel interface {
 	findVowel() []rune
 }
 
-type myVowel string
+type MyString string
 
-func (ms myVowel) findVowel() []rune {
-	vowel := []rune{}
+func (ms MyString) findVowel() []rune {
+	v := []rune{}
 
 	for _, r := range ms {
 		if r == 'a' || r == 'e' || r == 'i' || r == 'o' || r == 'u' {
-			vowel = append(vowel, r)
+			v = append(v, r)
 		}
 	}
-	return vowel
+	return v
 }
 
 func main() {
-	name := myVowel("Philip Osir Otieno")
+	name := MyString("Iddah Awuor Otieno")
 
-	var vl VowelFinder
+	var vl vowel
 
 	vl = name
 
-	fmt.Printf("The vowels are %c \n", vl.findVowel())
+	fmt.Printf("vowels are %c\n", vl.findVowel())
 }
