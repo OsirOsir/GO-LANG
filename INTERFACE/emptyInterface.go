@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-var i interface{}
+type i interface{}
 
-func found(i interface{}) {
+func found(val i) {
 
-	fmt.Printf("Type = %T, value = %v\n", i, i)
+	fmt.Printf("Type = %T, value = %v\n", val, val)
 }
 
 func main() {
