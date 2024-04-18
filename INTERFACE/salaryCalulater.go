@@ -49,5 +49,7 @@ func main() {
 		emp3: 78999,
 	}
 
-	totalExpence([]salaryCalcultar{pp, cc})
+	expenses := []salaryCalcultar{pp, cc}
+
+	totalExpence(expenses)
 }
