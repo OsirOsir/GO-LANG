@@ -41,7 +41,5 @@ func main() {
 		averagespeed: "78",
 	}
 
-	// person := []MotorVehicle{b1, a1}
-
 	totalMileage(b1)
 }
