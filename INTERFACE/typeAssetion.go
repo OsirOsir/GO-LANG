@@ -26,13 +26,9 @@ func (a Audi) Mileage() float64 {
 }
 
 func totalMileage(m []MotorVehicle) {
-	tm := 0.0
+	au := m.(BMW)
 
-	for _, v := range m {
-		tm = tm + v.Mileage()
-	}
-
-	fmt.Printf("The total Mileage per month is %.4fkm/l\n", tm)
+	fmt.Printf(au.averagespeed())
 }
 
 func main() {
@@ -41,12 +37,8 @@ func main() {
 		fuel:         45,
 		averagespeed: "78",
 	}
-	a1 := Audi{
-		distance: 154.2,
-		fuel:     30,
-	}
 
-	person := []MotorVehicle{b1, a1}
+	// person := []MotorVehicle{b1, a1}
 
-	totalMileage(person)
+	totalMileage(b1)
 }
