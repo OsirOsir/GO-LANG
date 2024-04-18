@@ -1,15 +1,33 @@
+// package main
+
+// import "fmt"
+
+// type i interface{}
+
+// func found(val i) {
+
+// 	fmt.Printf("Type = %T, value = %v\n", val, val)
+// }
+
+// func main() {
+// 	s := "Simplilearn"
+// 	found(s)
+// }
+
 package main
 
 import "fmt"
 
-type i interface{}
+var i interface{}
 
-func found(val i) {
-
-	fmt.Printf("Type = %T, value = %v\n", val, val)
+func found(i interface{}) {
+	fmt.Printf("Type = %T, value = %v\n", i, i)
 }
 
 func main() {
-	s := "Simplilearn"
+	s := "Simplelearn"
+
 	found(s)
+	i := 07
+	found(i)
 }
