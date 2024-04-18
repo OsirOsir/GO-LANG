@@ -9,7 +9,7 @@ func assert(i interface{}) {
 }
 
 func main() {
-	var s interface{} = 56
+	var y interface{} = 56
 
-	assert(s)
+	assert(y)
 }
