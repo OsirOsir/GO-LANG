@@ -1,49 +1,27 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
-	"io/ioutil"
-	"net/http"
+	"image/color"
 
-	"github.com/disintegration/imaging"
+	"github.com/fogleman/gg"
 )
 
 func main() {
-	// Fetch badge image
-	resp, err := http.Get("https://img.shields.io/badge/Go-46.3%25-blue")
-	if err != nil {
-		fmt.Println("Error fetching image:", err)
-		return
-	}
-	defer resp.Body.Close()
+	dc := gg.NewContext(200, 100)
+	dc.SetRGB(0, 0, 0)
+	dc.Clear()
 
-	// Read image bytes
-	imageBytes, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Println("Error reading image:", err)
-		return
-	}
+	// Draw badge background
+	dc.SetRGB(0.8, 0.2, 0.2)
+	dc.DrawCircle(100, 50, 40)
+	dc.Fill()
 
-	// Create a bytes.Buffer from imageBytes
-	imageBuffer := bytes.NewBuffer(imageBytes)
+	// Draw text
+	dc.SetColor(color.White)
+	dc.DrawStringAnchored("Badge", 100, 50, 0.5, 0.5)
 
-	// Decode image
-	srcImage, err := imaging.Decode(imageBuffer)
-	if err != nil {
-		fmt.Println("Error decoding image:", err)
-		return
-	}
-
-	// Resize image to 300x100
-	resizedImage := imaging.Resize(srcImage, 300, 100, imaging.Lanczos)
-
-	// Save resized image
-	err = imaging.Save(resizedImage, "resized_badge.png")
-	if err != nil {
-		fmt.Println("Error saving image:", err)
-		return
-	}
-
-	fmt.Println("Badge resized and saved successfully!")
+	// Save to PNG file
+	dc.SavePNG("badge.png")
+	fmt.Println("Badge generated successfully!")
 }
