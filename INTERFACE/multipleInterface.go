@@ -34,7 +34,7 @@ func Leavesremaining(e []Employee) {
 		fmt.Printf("The number of leave days remaining is %d\n", lft)
 		totallft += lft
 	}
-	fmt.Printf("The number of leave days remaining is %d\n", totallft)
+	// fmt.Printf("The number of leave days remaining is %d\n", totallft)
 
 }
 func main() {
