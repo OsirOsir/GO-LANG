@@ -20,7 +20,7 @@ type Address struct {
 	country string
 }
 
-func (a Address) Describe() {
+func (a *Address) Describe() {
 	fmt.Printf("State %s country %s\n", a.state, a.country)
 }
 
@@ -33,4 +33,9 @@ func main() {
 	p2 := Person{"Alice", 27}
 	d1 = &p2
 	d1.Describe()
+
+	var d2 Describer
+	a := Address{"Kisumu", "Kenya"}
+	d2 = &a
+	d2.Describe()
 }
