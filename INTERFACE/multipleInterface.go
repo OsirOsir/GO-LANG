@@ -6,8 +6,8 @@ type SalaryCalculator interface {
 	DisplaySalary()
 }
 
-type LeaveCalcultaor interface {
-	CalculateLeaveLeft() int
+type LeaveCalculator interface {
+	CalculateLeavesLeft() int
 }
 
 type Employee struct {
@@ -15,38 +15,39 @@ type Employee struct {
 	lastName    string
 	basicPay    int
 	pf          int
-	totalLeaves int
+	tatalLeaves int
 	leavesTaken int
 }
 
 func (e Employee) DisplaySalary() {
-	fmt.Printf("%s %s Salary is $ %d\n", e.firstName, e.lastName, e.basicPay)
+	fmt.Printf("%s %s salary is $%d\n", e.firstName, e.lastName, e.basicPay)
 }
 
-func (e Employee) CalculateLeaveLeft() int {
-	return e.totalLeaves - e.leavesTaken
+func (e Employee) CalculateLeavesLeft() int {
+	return e.tatalLeaves - e.leavesTaken
 }
 
-func leavedayslft(s []LeaveCalcultaor) {
-
-	for _, v := range s {
-		v.CalculateLeaveLeft()
+func Leavesremaining(e []Employee) {
+	lft := 0
+	for _, v := range e {
+		lft = v.CalculateLeavesLeft()
 	}
-	fmt.Printf("Number of leave left is %v\n", v.CalculateLeaveLeft)
+	fmt.Printf("The number of leave days remaining is %d\n", lft)
 }
-
 func main() {
-	e1 := Employee{
+	emp1 := Employee{
 		firstName:   "Philip",
-		lastName:    "Otieno",
-		basicPay:    36000,
-		pf:          123,
-		totalLeaves: 35,
-		leavesTaken: 25,
+		lastName:    "Osir",
+		basicPay:    39000,
+		pf:          75,
+		tatalLeaves: 39,
+		leavesTaken: 24,
 	}
-	var sl SalaryCalculator
-	sl = e1
-	sl.DisplaySalary()
+	var ds SalaryCalculator
+	ds = emp1
+	ds.DisplaySalary()
 
-	leavedayslft([]LeaveCalcultaor{e1})
+	leaves := []Employee{emp1}
+	Leavesremaining(leaves)
+
 }
