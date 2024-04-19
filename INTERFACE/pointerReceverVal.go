@@ -30,7 +30,7 @@ func main() {
 	d1 = p1
 	d1.Describe()
 
-	p2 = Person{"Alice", 27}
+	p2 := Person{"Alice", 27}
 	d1 = &p2
 	d1.Describe()
 }
