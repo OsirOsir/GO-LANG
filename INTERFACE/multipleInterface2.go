@@ -20,11 +20,11 @@ type Employee struct {
 }
 
 func (e Employee) DisplaySalary() {
-	fmt.Printf("%s salary is %d\n", e.firstName, e.lastName, e.basicPay)
+	fmt.Printf("%s %s salary is %d\n", e.firstName, e.lastName, e.basicPay)
 }
 
 func (e Employee) CalculateLeavesLeft() int {
-	return e.tatalLeaves - e.leavesTaken
+	return e.totalLeaves - e.leavesTaken
 }
 
 func main() {
@@ -33,13 +33,13 @@ func main() {
 		lastName:    "Otieno",
 		basicPay:    30000,
 		pf:          5,
-		tatalLeaves: 25,
+		totalLeaves: 25,
 		leavesTaken: 18,
 	}
 
-	ds := e
+	var ds SalaryCalculator = e
 	ds.DisplaySalary()
 
-	l := e
-	fmt.Printf("Remaining leave days are %d", l.CalculateLeavesLeft)
+	var l LeaveCalculator = e
+	fmt.Printf("Remaining leave days are %d\n", l.CalculateLeavesLeft())
 }
