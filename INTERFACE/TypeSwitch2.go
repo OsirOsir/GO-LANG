@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func assert(i interface{}) {
+func findType(i interface{}) {
 
 	switch i.(type) {
 	case string:
@@ -19,8 +19,8 @@ func main() {
 	Age := 34
 	weight := 4.5
 
-	assert(name)
-	assert(Age)
-	assert(weight)
+	findType(name)
+	findType(Age)
+	findType(weight)
 
 }
