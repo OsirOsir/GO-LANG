@@ -28,11 +28,14 @@ func (e Employee) CalculateLeavesLeft() int {
 }
 
 func Leavesremaining(e []Employee) {
-	lft := 0
+	totallft := 0
 	for _, v := range e {
-		lft = v.CalculateLeavesLeft()
+		lft := v.CalculateLeavesLeft()
+		fmt.Printf("The number of leave days remaining is %d\n", lft)
+		totallft += lft
 	}
-	fmt.Printf("The number of leave days remaining is %d\n", lft)
+	fmt.Printf("The number of leave days remaining is %d\n", totallft)
+
 }
 func main() {
 	emp1 := Employee{
