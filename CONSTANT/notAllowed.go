@@ -5,13 +5,8 @@ import (
 	"math"
 )
 
-func sqrt(n float64) {
-	a := math.Sqrt(n)
-	fmt.Printf("Squre root of a is %.1f\n", a)
-}
-
 func main() {
-	v := 4.0
-
-	sqrt(v)
+	a := math.Sqrt(4)
+	const b = math.Sqrt(4)
+	fmt.Printf("Squre root of %.1f is %.1f\n", a)
 }
