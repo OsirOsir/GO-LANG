@@ -23,4 +23,12 @@ func main() {
 	printBytes(name)
 	fmt.Printf("\n")
 	printCharacters(name)
+	fmt.Printf("\n\n")
+
+	name = "Señor"
+	fmt.Printf("String: %s\n", name)
+	printCharacters(name)
+	fmt.Printf("\n")
+	printBytes(name)
+	fmt.Println()
 }
