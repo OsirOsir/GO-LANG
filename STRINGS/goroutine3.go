@@ -13,5 +13,7 @@ func printNumbers() {
 }
 func main() {
 	go printNumbers()
+	time.Sleep(3 * time.Second)
 
+	fmt.Println("Exiting Program")
 }
