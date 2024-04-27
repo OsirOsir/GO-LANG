@@ -11,9 +11,7 @@ func printNumbers() {
 		time.Sleep(1 * time.Second)
 	}
 }
-
 func main() {
 	go printNumbers()
-	time.Sleep(3 * time.Second)
-	fmt.Println("Main function exiting")
+
 }
