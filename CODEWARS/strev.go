@@ -4,9 +4,8 @@ import "fmt"
 
 func strev(word string) string {
 	rev := ""
-
-	for i := len(word) - 1; i >= 0; i-- {
-		rev = rev + string(word[i])
+	for _, v := range word {
+		rev += string(v)
 	}
 	return rev
 }
